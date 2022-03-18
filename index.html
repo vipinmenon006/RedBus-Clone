@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedBus</title>
+    <script src="https://kit.fontawesome.com/0bf8145b6c.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifS;
+        }
+        .container1{
+            background-color: #d85357;
+            position: relative;
+            z-index: 0;
+            transform: scaleX(1.01);
+        }
+        .navbar{
+            position: fixed;
+            z-index: 2;
+            background-color: #d85357;
+            width: 1500px;
+            transform: scaleX(1.02);
+        }   
+        .lftbtn li{
+            display: inline;
+        }
+        .rgtbtn li{
+            display: inline;
+        }
+        button{
+            background-color: #d85357;
+            border: none;
+            color:whitesmoke;
+        }
+        .select{
+            background-color: #d85357;
+            border: none;
+            color: white;
+        }
+        .logo{
+            margin-left: 100px;
+            padding-top: 5px;
+        }
+        .buttons1{
+            display: flex;
+            margin-top: -50px;
+            margin-left: 150px;
+        }
+        .buttons2{
+            float: right;
+            margin-top: -60px;
+            margin-right: 140px;
+        }
+        .img1{
+            margin-top: -10px;
+        }
+        i{
+            color: white;
+        }
+        h4{
+            color: gray;
+        }
+        .box1{
+            background-color: white;
+            display: flex;
+            position: absolute;
+            z-index: 1;
+            border: gray;
+            margin-top: -60px;
+            margin-left: 450px;
+            padding-top: 10px;
+            padding-bottom: -5px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .boximg{
+            padding-left: 45px;
+        }
+        .content1{
+            padding-left: 20px;
+            padding-right: 50px;
+        }
+        .container2{
+            display: flex;
+            margin-top: 90px;
+            background-color: whitesmoke;
+            justify-content:space-between;
+            margin-left: 220px;
+            margin-right: 200px;
+        }
+        .boxa{
+            box-shadow: 2px 0px 4px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-right: 25px;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+        .boxb{
+            box-shadow: 2px 0px 4px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-right: 25px;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-bottom: ;
+        }
+        .boxc{
+            box-shadow: 2px 0px 4px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container3{
+            margin-top: 100px;
+            margin-left: 210px;
+            margin-right: 200px;
+            border: solid;
+            border-color: #e6e6e6;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        .cntnr{
+            margin-left: 130px;
+            margin-top: -130px;
+        }
+        .cont2{
+            display: flex;
+            margin-left: 75px;
+            justify-content: space-around;
+            margin-top: -20px;
+        }
+        .cntnr>h2{
+            font-size: 240%;
+            font-weight: 600;
+        }
+        .cntnr>h4{
+            font-size: x-large;
+            font-weight: 100;
+        }
+        .cntnr span a{
+            text-decoration: none;
+            font-size: 50%;
+            color: blue;
+            font-weight: bold;
+        }
+        #opt{
+            margin-top: -25px;
+        }
+        .h5{
+            margin-top: -8px;
+            color: gray;
+            font-size: 115%;
+            font-weight: 400;
+        }
+        h3{
+            color: navy;
+            font-size: x-large;
+        }
+        h2{
+            font-size: xx-large;
+            color: #494a49;
+        }
+        p{
+            color: gray;
+        }
+        .para1{
+            position: relative;
+            margin-left: 280px;
+            margin-top: 100px;
+        }
+        .paraimgbg{
+            margin-top: -370px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        .textbox{
+            position: absolute;
+            margin-top: -220px;
+            margin-left: 400px;
+        }
+        .txt1,.txtdate{
+            height: 40px;
+            width: 190px;
+            margin-left: -5px;
+        }
+        .txtdate{
+            height: 40px;
+        }
+        .txtbtn{
+            padding-right: 25px;
+            padding-left: 25px;
+            height: 43px;
+            margin-left: -4px;
+        }
+        .paraimg{
+            position: absolute;
+            z-index: 1;
+            margin-left: 925px;
+            margin-top: -550px;
+        }
+        .btn{
+            background-color: #d85357;
+            padding-bottom: 5px;
+            padding-top: 5px ;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: 75px;
+        }
+        .text{
+            width: 180px;
+        }
+        .select1{
+            width: 70px;
+        }
+        .container5{
+            background-color: #eaeaea;
+            border: 2px solid #d9d9d9;
+            padding-bottom: 40px;
+        }
+        #top{
+            text-align: center;
+            padding-top: 0px;
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+        .bottomgrid{
+            display: inline-grid;
+            grid-template-columns: 320px 320px 320px 320px;
+            margin-left: 125px;
+            margin-top: -40px;
+        }
+        .grids{
+            border: 1px solid #d9d9d9;
+            background-color: white;
+            text-align: center;
+            padding-top: 35px ;
+            padding-bottom: 40px;   
+        }
+        h5{
+            color: gray;
+        }
+        .container6{
+            background-color: white;
+            text-align: center;
+        }
+        .grid2{
+            display: inline-grid;
+            grid-template-columns: 350px 350px 350px ;
+            text-align: center;
+            margin-top: 80px;
+            padding-bottom: 50px;
+            margin-left: 20px;
+        }
+        .container7{
+            background-color: #eaeaea;
+            border: 2px solid #d9d9d9;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .grid3{
+            display: inline-grid;
+            grid-template-columns: 320px 320px 320px;
+            margin-top: 50px;
+        }
+        .container8{
+            background-color: white;
+            text-align: center;
+        }
+        .grid4{
+            display: inline-grid;
+            grid-template-columns: 350px 350px 350px ;
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 50px;
+            margin-left: 20px;
+        }
+        h1{
+            color: #d85357;
+            font-size: 275%;
+            font-weight: 500;
+        }
+        .container9{
+            background-color: #eaeaea;
+            border: 2px solid #d9d9d9;
+            padding-bottom: 85px;
+            padding-top: 20px;
+        }
+        .listcontnr{
+            display: inline-grid;
+            grid-template-columns: 200px 200px 200px 200px 230px;
+            margin-left: 250px;
+            font-weight: 100;
+        }
+        .listbtn{
+            border: none;
+            color: gray;
+            background-color: #eaeaea;
+            font-size: 90%;
+        }
+        hr{
+            color: gray;
+            margin-left: 250px;
+            margin-right: 200px;
+        }
+        h6{
+            font-size: large;
+            padding-bottom: -50px;
+        }
+        .operators{
+            margin-left: 250px;
+            margin-right: 200px;
+        }
+        .operators>button{
+            font-size: 90%;
+            font-weight: 100;
+        }
+        .container10{
+            background-color: #1b2330;
+        }
+        .footer{
+            display: inline-grid;
+            grid-template-columns: 200px 200px 200px 200px 300px;
+            margin-left: 250px;
+            padding-top: 30px;
+        }
+        .listbtn1{
+            border: none;
+            background-color: #1b2330;
+        }
+    </style>
+</head>
+<body>
+      <div class="navbar"> 
+        <div class="logo">
+        <img src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png" alt="logo">
+        </div>
+        <div class="buttons1">
+            <ul class="lftbtn">
+                <li><button><b>BUS TICKETS</b></button></li>
+                <li><button>rPool</button></li> 
+                <li><button>BUS HIRE</button></li>
+            </ul>
+        </div>
+        <div class="buttons2">
+            <ul class="rgtbtn">
+                <li><button>Help</button></li>
+                <li><select class="select"><option>Manage Booking</option></select></li> 
+                <li><i class="far fa-user-circle"></i></li>
+                <li><select class="select"><option></option></select></li>
+            </ul>
+        </div>
+      </div>
+    <div class="container1">
+        <div class="img1">
+            <img src="https://st.redbus.in/Images/HomeIndia/nataknew.png" alt="" height="400px" width="1500px">
+        </div>
+    </div>
+    <div class="textbox">
+        <input type="text" class="txt1" placeholder="  FROM">
+        <input type="text" class="txt1" placeholder="  TO">
+        <input type="date" class="txtdate">
+        <button class="txtbtn"><b>Search Buses</b></button>
+    </div>
+    <div class="box1">
+        <div class="boximg">
+            <img src="https://st.redbus.in/Images/natak/100x100.png" alt="">
+        </div>
+        <div class="content1">
+            <h3>SAVE THE DRAMA FOR THE STAGE!</h3>
+            <h4><small>Book your favourite seat online with redBus</small></h4>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="boxa">
+            <h4><small> Upto Rs. 150 on bus tickets</small></h4><br>
+            <img src="https://st.redbus.in/Images/INDOFFER/Nonatak/new/80x80.png" alt="first" height="100px"><br>
+            <h4><small>Use Code FIRST</small></h4>
+        </div>
+        <div class="boxb">
+            <h4><small>Get 10% off upto Rs.100 on Gujarat Routes</small></h4><br>
+            <img src="https://st.redbus.in/Images/INDOFFER/FESTIVE/New/Diwali/274x147.png" alt="TakingHours" height="100px"><br>
+            <h4><small>Use Code LIGHTS10</small></h4>
+        </div>
+        <div class="boxc">
+            <h4><small>Get 10% off upto Rs.100 on Andhra Pradesh and TG Routes</small></h4><br>
+            <img src="https://st.redbus.in/Images/INDOFFER/FESTIVE/New/Diwali/274x147.png" alt="TakingHours" height="100px"><br>
+            <h4><small>Use Code FESTIVE10</small></h4>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="imgsfty">
+        <img src="https://s3.rdbuz.com/Images/safety/srp/safety.svg" alt="safety+" height="90px" width="90px">
+        </div>
+        <div class="cntnr">
+        <h2>Safety+</h2>
+        <h4 id="opt">Opt to Travel Safe with redBus &nbsp;<span><a href="">KNOW MORE</a></span></h4>
+        <h5 class="h5">Look for buses with Safety+ tag while booking your journey,</h5>
+        </div>
+        <div class="cont2">
+          <div class="con1">
+            <h3>Sanitized Bus</h3>
+            <p>All Safety+ buses are sanitized and <br> disinfected before and after every <br> trip.</p>
+          </div>
+          <div class="con2">
+            <h3>Mandatory Masks</h3>
+            <p>Proper masks are mandatory for all <br> passengers and bus staff.</p>
+          </div>
+          <div class="con3">
+            <h3>Thermal Screening</h3>
+            <p>All passengers will undergo thermal <br> screening. Temperature checks for <br> bus drivers and service staff are <br> done before every trip.</p>
+          </div>
+        </div>
+    </div>
+    <div class="container4">
+        <div class="para1">
+            <h2>CONVENIENCE ON-THE-GO.</h2>
+            <p>Enjoy the following exclusive features on the redBus <br> app.</p>
+            <p>Last Minute Booking - In a hurry to book a bus at the <br> last minute? Choose the bus passing from your <br> nearest boarding point and book in a few easy steps.</p>
+            <p>Boarding Point Navigation - Never lose your way <br> while travelling to your boarding point!</p>
+            <p>Comprehensive Ticket Details- Everything that you <br> need to make the travel hassle free - rest stop details,<br> boarding point images, chat with co-passengers,<br> wake-up alarm and much more!</p>
+            <p>Enter your mobile number below to <br> download the redBus mobile app.</p>
+            <select class="select1"><option>+91</option></select>
+            <input type="text" class="text" placeholder="Enter your mobile number"> <br><br>
+            <button class="btn">SEND ME THE LINK</button><br><br>
+            <img src="https://itunes.apple.com/in/app/redbus/id733712604?mt=8" alt="apple">
+            <img src="https://play.google.com/store/apps/details?id=in.redbus.android&hl=en" alt="playstore">
+        </div>
+        <div class="paraimgbg">
+            <img src="https://s2.rdbuz.com/web/images/home/city_scape_app_download.png" alt="" width="1500px">
+        </div>
+        <div class="paraimg">
+            <img src="https://s1.rdbuz.com/web/images/home/IOS_Android_device.png" alt="" height="550px">
+        </div>
+    </div>
+    <div class="container5">
+        <div id="top">
+            <img src="https://s1.rdbuz.com/web/images/home/promise.png" alt="promise" height="100px">
+            <h2>WE PROMISE TO DELIVER</h2>
+        </div>
+        <div class="bottomgrid">
+            <div class="grids">
+                <img src="https://s3.rdbuz.com/Images/safety/srp/safety.svg" alt="safety" height="100px"><br>
+                <h5>SAFETY+</h5><br>
+                <p>With Safety+ we have brought <br> in a set of measures like <br> Sanitized buses, mandatory <br> masks etc. to ensure you travel <br> safely.</p>
+            </div>
+            <div class="grids">
+                <img src="https://s1.rdbuz.com/web/images/home/customer_care.png" alt="cc" height="100px"><br>
+                <h5>SUPERIOR CUSTOMER <br> SERVICE</h5><br>
+                <p>We put our experience and <br> relationships to good use and <br> are available to solve your travel <br> issues.</p>
+            </div>
+            <div class="grids">
+                <img src="https://s1.rdbuz.com/web/images/home/lowest_Fare.png" alt="lp" height="100px"><br>
+                <h5>LOWEST PRICES</h5><br>
+                <p>We always give you the lowest <br> price with the best partner <br> offers.</p>
+            </div>
+            <div class="grids">
+                <img src="https://s2.rdbuz.com/web/images/home/benefits.png" alt="UB" height="100px"><br>
+                <h5>UNMATCHED BENEFITS</h5><br>
+                <p>We take care of your travel <br> beyond ticketing by providing <br> you with innovative and unique <br> benefits.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container6">
+        <h2>AWARDS & RECOGNITION</h2>
+        <div class="grid2">
+            <div class="grids1">
+                <img src="https://s2.rdbuz.com/web/images/home/awards/Business_Standard1.png" alt="safety"  height="100px"><br><br>
+                <h5>MOST INNOVATIVE <br> COMPANY</h5>
+            </div>
+            <div class="grids1">
+                <img src="https://s1.rdbuz.com/web/images/home/awards/Brand_Trust_Report.png" alt="cc" height="100px"><br><br>
+                <h5>MOST TRUSTED <br> BRAND</h5>
+            </div>
+            <div class="grids1">
+                <img src="https://s3.rdbuz.com/web/images/home/awards/Eye_for_Travel1.png" alt="lp" height="100px""><br><br>
+                <h5>MOBILE INNOVATION <br> AWARD</h5>
+            </div> 
+        </div>
+    </div>
+    <div class="container7">
+        <h2>OUR GLOBAL PRESENCE</h2>
+        <div class="grid3">
+            <div class="grids2">
+                <img src="https://flagicons.lipis.dev/flags/4x3/co.svg" alt="col"  height="100px"><br>
+                <h5>COLUMBIA</h5>
+            </div>
+            <div class="grids2">
+                <img src="https://flagicons.lipis.dev/flags/4x3/in.svg" alt="IND" height="100px"><br>
+                <h5>INDIA</h5>
+            </div>
+            <div class="grids2">
+                <img src="https://flagicons.lipis.dev/flags/4x3/id.svg" alt="indo" height="100px""><br>
+                <h5>INDONESIA</h5>
+            </div> 
+            <div class="grids2">
+                <img src="https://flagicons.lipis.dev/flags/4x3/my.svg" alt="mal"  height="100px"><br>
+                <h5>MALAYSIA</h5>
+            </div>
+            <div class="grids2">
+                <img src="https://flagicons.lipis.dev/flags/4x3/pe.svg" alt="peru" height="100px"><br>
+                <h5>PERU</h5>
+            </div>
+            <div class="grids2">
+                <img src="https://flagicons.lipis.dev/flags/4x3/sg.svg" alt="SIN" height="100px""><br>
+                <h5>SINGAPORE</h5>
+            </div> 
+        </div>
+    </div>
+    <div class="container8">
+        <h2>THE NUMBERS ARE GROWING!</h2>
+        <div class="grid4">
+            <div class="grids3">
+                <h5>CUSTOMERS</h5>
+                <h1>36 M</h1>
+                <p>redBus is trusted by over <br> 36 million happy customers <br> globally</p>
+            </div>
+            <div class="grids3">
+                <h5>OPERATORS</h5>
+                <h1>35OO</h1>
+                <p>network of over 3500 bus <br> operators worldwide</p>
+            </div>
+            <div class="grids3">
+                <h5>BUS TICKETS</h5>
+                <h1>220+ M</h1>
+                <p>Over 220 million trips <br> booked using redBus</p>
+            </div> 
+        </div>
+    </div>
+    <div class="container9">
+      <div class="listcontnr">
+        <div class="list1">
+        <h6>Top Bus Routes</h6>
+            <button class="listbtn">Hyderabad to Bangalore Bus</button><br><br>
+            <button class="listbtn">Bangalore to Chennai Bus</button><br><br>
+            <button class="listbtn">Pune to Bangalore Bus</button><br><br>
+            <button class="listbtn">Mumbai to Bangalore Bus</button><br><br>
+            <button class="listbtn">More ></button><br><br>
+        </div>
+        <div class="list2">
+            <h6>Top Cities</h6>
+            <button class="listbtn">Hyderabad Bus tickets</button><br><br>
+            <button class="listbtn">Bangalore Bus tickets</button><br><br>
+            <button class="listbtn">Chennai Bus tickets</button><br><br>
+            <button class="listbtn">Pune Bus tickets</button><br><br>
+            <button class="listbtn">More ></button><br><br>
+        </div>
+        <div class="list3">
+            <h6>Top RTC's</h6>
+            <button class="listbtn">APSRTC</button><br><br>
+            <button class="listbtn">MSRTC</button><br><br>
+            <button class="listbtn">HRTC</button><br><br>
+            <button class="listbtn">UPSRTC</button><br><br>
+            <button class="listbtn">More ></button><br><br>
+        </div>
+        <div class="list4">
+            <h6>Other</h6>
+            <button class="listbtn">GSRTC</button><br><br>
+            <button class="listbtn">RSRTC</button><br><br>
+            <button class="listbtn">KTCL</button><br><br>
+            <button class="listbtn">PEPSU</button><br><br>
+            <button class="listbtn">More ></button><br><br>
+        </div>
+        <div class="list5">
+            <h6>Tempo Traveller in Cities</h6>
+            <button class="listbtn">Tempo Traveller in Bangalore</button><br><br>
+            <button class="listbtn">Tempo Traveller in Chennai</button><br><br>
+            <button class="listbtn">Tempo Traveller in Mumbai</button><br><br>
+            <button class="listbtn">Tempo Traveller in Hyderabad</button><br><br>
+            <button class="listbtn">Tempo Traveller in Ahmedabad</button><br><br>
+        </div>
+      </div>
+        
+        <br><br>
+        <hr>
+
+        <div class="operators">
+            <h6>Top Operators</h6>
+            <button class="listbtn">SRS Travels</button>|
+            <button class="listbtn">Evacay Bus</button>|
+            <button class="listbtn">Kallada Travels</button>|
+            <button class="listbtn">KPN Travels</button>|
+            <button class="listbtn">Orange Travels</button>|
+            <button class="listbtn">Parveen Travels</button>|
+            <button class="listbtn">Rajdhani Express</button>|
+            <button class="listbtn">VRL Travels</button>|
+            <button class="listbtn">Chartered Speed Bus</button>| <br><br>
+            <button class="listbtn">Bengal Tiger</button>|
+            <button class="listbtn">SRM Travels</button>|
+            <button class="listbtn">Infant Jesus</button>|
+            <button class="listbtn">Patel Travels</button>|
+            <button class="listbtn">JBT Travels</button>|
+            <button class="listbtn">Shatabdi Travels</button>|
+            <button class="listbtn">Eagle Travels</button>|
+            <button class="listbtn">Kanker Roadways</button>|
+            <button class="listbtn">Komitla</button>| <br><br>
+            <button class="listbtn">Sri Krishna Travels</button>|
+            <button class="listbtn">Humsafar Travels</button>|
+            <button class="listbtn">Mahasagar Travels</button>|
+            <button class="listbtn">Raj Express</button>|
+            <button class="listbtn">Sharma Travels</button>|
+            <button class="listbtn">Shrinath Travels</button>|
+            <button class="listbtn">Universal Travels</button>|
+            <button class="listbtn">Verma Travels</button>| <br><br>
+            <button class="listbtn">Gujarat Travels</button>|
+            <button class="listbtn">Madurai Radha Travels</button>|
+            <button class="listbtn">Patel Tours and Travels</button>|
+            <button class="listbtn">Paulo Travels</button>|
+            <button class="listbtn">Royal Travels</button>|
+            <button class="listbtn">Amarnath Travels</button>|
+            <button class="listbtn">Vaibhav Travels</button>|
+            <button class="listbtn">Ganesh Travels</button>| <br><br>
+            <button class="listbtn">Jabbar Travels</button>|
+            <button class="listbtn">Jain Travels</button>|
+            <button class="listbtn">Manish Travels</button>|
+            <button class="listbtn">Pradhan Travels</button>|
+            <button class="listbtn">YBM Travels</button>|
+            <button class="listbtn">Hebron Transports</button>|
+            <button class="listbtn">Mahalaxmi travels</button>|
+            <button class="listbtn">MR Travels</button>|
+            <button class="listbtn">Vivegam Travels</button>| <br><br>
+            <button class="listbtn">VST Travels</button>|
+            <button class="listbtn">Jakhar Travels</button>|
+            <button class="listbtn">Kaleswari Travels</button>|
+            <button class="listbtn">Mahendra Travels</button>|
+            <button class="listbtn">Neeta Tours and Travels</button>|
+            <button class="listbtn">Yamani Travels</button>|
+            <button class="listbtn">Arthi Travels</button>|
+        </div>
+    </div>
+    <div class="container10">
+        <div class="footer">
+            <div class="listftr1">
+                    <h4>About redBus</h4>
+                    <button class="listbtn1">About Us</button><br><br>
+                    <button class="listbtn1">Contact Us</button><br><br>
+                    <button class="listbtn1">Mobile Version</button><br><br>
+                    <button class="listbtn1">redBus ON Mobile</button><br><br>
+                    <button class="listbtn1">Sitemap</button><br><br>
+                    <button class="listbtn1">Offers</button><br><br>
+                    <button class="listbtn1">Careers</button><br><br>
+                    <button class="listbtn1">Values</button><br><br>
+                </div>
+                <div class="listftr1">
+                    <h4>Info</h4>
+                    <button class="listbtn1">T&C</button><br><br>
+                    <button class="listbtn1">Privacy Policy</button><br><br>
+                    <button class="listbtn1">FAQ</button><br><br>
+                    <button class="listbtn1">Blog</button><br><br>
+                    <button class="listbtn1">Bus Operator Registration</button><br><br>
+                    <button class="listbtn1">Agent Registration</button><br><br>
+                    <button class="listbtn1">Insurance Partner</button><br><br>
+                    <button class="listbtn1">User Agreement</button><br><br>
+                </div>
+                <div class="listftr1">
+                    <h4>Global Sites</h4>
+                    <button class="listbtn1">India</button><br><br>
+                    <button class="listbtn1">Singapore</button><br><br>
+                    <button class="listbtn1">Malaysia</button><br><br>
+                    <button class="listbtn1">Indonesia</button><br><br>
+                    <button class="listbtn1">Peru</button><br><br>
+                    <button class="listbtn1">Columbia</button><br><br>
+                    </div>
+                <div class="listftr1">
+                    <h4>Our Partners</h4>
+                    <button class="listbtn1">Goibibo</button><br><br>
+                    <button class="listbtn1">Makemytrip</button><br><br>
+                </div>
+                <div class="listftr2">
+                    <img src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png" alt="logo">
+                    <p>redBus is the world's largest online bus ticket <br> booking service trusted by over 25 million <br> happy customers globally. redBus offers bus <br>
+                    ticket booking through its website,iOS and <br> Android mobile apps for all major routes.</p><br>
+                    <img src="https://www.facebook.com/redbus.in/">
+                    <img src="https://twitter.com/redBus_in"><br>
+                    <p>Ⓒ 2021 ibibogroup All rights reserved</p>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
